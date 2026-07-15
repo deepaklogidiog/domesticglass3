@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Railings - Domestic Glass</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--black:#0A0A0A;--white:#FFFFFF;--g50:#F8F8F8;--g100:#F2F2F2;--g200:#E4E4E4;--g400:#9A9A9A;--g600:#5A5A5A;--g800:#2A2A2A;--teal:#458895;--teal-d:#336670;--fm:'Montserrat',system-ui,sans-serif;--fb:'DM Sans',system-ui,sans-serif;}
+html{scroll-behavior:smooth;}body{font-family:var(--fb);font-size:16px;line-height:1.6;color:var(--black);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;}img{max-width:100%;display:block;}
+.rev{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease;}.rev.on{opacity:1;transform:none;}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+.wrap{max-width:1200px;margin:0 auto;padding:0 48px;}
+.teal-bar{display:block;width:36px;height:2px;background:var(--teal);margin-bottom:18px;}
+.eyebrow-g{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--g400);}
+.eyebrow-w{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.45);}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--fb);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;transition:all .22s;cursor:pointer;border:none;}
+.btn-blk{background:var(--black);color:var(--white);}.btn-blk:hover{background:var(--teal);}
+.btn-teal{background:var(--teal);color:var(--white);}.btn-teal:hover{background:var(--teal-d);}
+#hdr{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--g200);transition:box-shadow .3s;}
+#hdr.sc{box-shadow:0 4px 24px rgba(0,0,0,.07);}
+.nav{max-width:1200px;margin:0 auto;padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.logo img{height:40px;width:auto;display:block;}
+.logo-fb{font-family:var(--fm);font-size:18px;color:var(--black);display:none;}.logo-fb span{color:var(--teal);}
+.nl{display:flex;align-items:center;list-style:none;}
+.nl>li>a{font-size:12.5px;font-weight:500;letter-spacing:.04em;color:var(--g600);padding:8px 14px;display:flex;align-items:center;gap:4px;transition:color .2s;}
+.nl>li>a:hover,.nl>li.act>a{color:var(--black);}
+.drop{position:relative;}.drop>a svg{transition:transform .2s;}.drop:hover>a svg{transform:rotate(180deg);}
+.dd{position:absolute;top:calc(100% + 8px);left:0;background:var(--white);border:1px solid var(--g200);min-width:210px;padding:8px 0;box-shadow:0 16px 40px rgba(0,0,0,.10);opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .2s;list-style:none;}
+.drop:hover .dd{opacity:1;visibility:visible;transform:none;}
+.dd li a{display:block;padding:10px 18px;font-size:12.5px;color:var(--g600);transition:background .15s,color .15s;}.dd li a:hover{background:var(--g50);color:var(--teal);}
+.nr{display:flex;align-items:center;gap:14px;flex-shrink:0;}
+.nph{font-size:12.5px;font-weight:500;color:var(--g600);transition:color .2s;}.nph:hover{color:var(--teal);}
+.hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.hbg span{display:block;width:22px;height:1.5px;background:var(--black);transition:transform .25s,opacity .25s;}
+.hbg.op span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}.hbg.op span:nth-child(2){opacity:0;}.hbg.op span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.mob{display:none;flex-direction:column;background:var(--white);border-top:1px solid var(--g200);padding:16px 24px 24px;}
+.mob.op{display:flex;}.mob a{font-size:15px;color:var(--g800);padding:13px 0;border-bottom:1px solid var(--g100);transition:color .2s;}.mob a:last-child{border-bottom:none;}.mob a:hover{color:var(--teal);}
+.mob-cta{margin-top:16px;background:var(--black);color:var(--white)!important;text-align:center;padding:13px!important;border-bottom:none!important;font-weight:600;font-size:11px!important;text-transform:uppercase;}
+.ph{padding:148px 0 0;background:var(--black);position:relative;overflow:hidden;}
+.ph::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px;}
+.ph-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:stretch;}
+.ph-left{padding-bottom:80px;}
+.ph h1{font-family:var(--fm);font-size:clamp(42px,5vw,76px);font-weight:300;line-height:1.05;color:var(--white);margin:18px 0 24px;}
+.ph h1 em{font-style:normal;font-weight:600;color:var(--teal);}
+.ph-left p{font-size:16px;line-height:1.75;color:rgba(255,255,255,.48);margin-bottom:32px;}
+.apps-box{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);padding:28px 24px;margin-top:36px;}
+.apps-box h3{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:14px;}
+.apps{display:flex;flex-wrap:wrap;gap:8px;}
+.app-tag{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);padding:6px 14px;font-size:12px;color:rgba(255,255,255,.58);}
+.ph-img{position:relative;overflow:hidden;min-height:400px;}
+.ph-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.ph-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.25) 0%,transparent 60%);}
+.ph-teal{position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--teal);z-index:2;}
+.challenges{padding:96px 0;background:var(--g50);}
+.challenges h2{font-family:var(--fm);font-size:clamp(30px,3.5vw,46px);font-weight:300;color:var(--black);margin:14px 0 48px;}
+.cg{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--g200);}
+.ci{padding:36px 28px;border-right:1px solid var(--g200);position:relative;overflow:hidden;transition:background .2s;}
+.ci:last-child{border-right:none;}.ci:hover{background:var(--white);}
+.ci::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .3s;}
+.ci:hover::before{transform:scaleX(1);}
+.ci h3{font-family:var(--fm);font-size:20px;font-weight:400;color:var(--black);margin-bottom:10px;}
+.ci p{font-size:13px;line-height:1.65;color:var(--g600);}
+.benefits{padding:96px 0;background:var(--white);}
+.bg2{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.bl h2{font-family:var(--fm);font-size:clamp(30px,3.5vw,46px);font-weight:300;color:var(--black);margin:14px 0 28px;}
+.bis{display:flex;flex-direction:column;}
+.bi{display:flex;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid var(--g100);}
+.bi:first-child{padding-top:0;}.bi:last-child{padding-bottom:0;border-bottom:none;}
+.bdot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;}
+.bi span{font-size:14px;color:var(--g600);}
+.bimg{position:relative;overflow:hidden;}
+.bimg img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/5;}
+.bimg::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--teal);}
+.scta{background:var(--teal);padding:80px 0;}
+.scta-i{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+.scta h2{font-family:var(--fm);font-size:clamp(26px,3.5vw,46px);font-weight:300;color:var(--white);margin-bottom:8px;}
+.scta p{font-size:15px;color:rgba(255,255,255,.62);}
+.btn-ws{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--teal);font-family:var(--fb);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;transition:all .22s;}
+.btn-ws:hover{background:var(--black);color:var(--white);}
+#ft{background:var(--black);padding:72px 0 0;}
+.ftg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:52px;padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,.07);}
+.fli{height:38px;width:auto;display:block;margin-bottom:18px;opacity:.85;}
+.ftag{font-size:13px;line-height:1.65;color:rgba(255,255,255,.38);max-width:240px;margin-bottom:24px;}
+.fc h4{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:18px;}
+.fc ul{list-style:none;}.fc ul li{margin-bottom:9px;}.fc ul li a{font-size:13px;color:rgba(255,255,255,.42);transition:color .2s;}.fc ul li a:hover{color:var(--teal);}
+.fci{display:flex;flex-direction:column;gap:9px;}.fca{font-size:13px;color:rgba(255,255,255,.42);display:flex;gap:7px;transition:color .2s;}.fca:hover{color:var(--teal);}
+.fbb{padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+.fbcp{font-size:11px;color:rgba(255,255,255,.18);}
+.fbl{display:flex;gap:18px;}.fbl a{font-size:11px;color:rgba(255,255,255,.18);transition:color .2s;}.fbl a:hover{color:var(--teal);}
+@media(max-width:1024px){.ph-inner{grid-template-columns:1fr;}.bg2{grid-template-columns:1fr;gap:44px;}.cg{grid-template-columns:1fr 1fr;}.ftg{grid-template-columns:1fr 1fr;}}
+@media(max-width:900px){.nl,.nr .btn-blk,.nph{display:none;}.hbg{display:flex;}.wrap,.nav{padding-left:24px;padding-right:24px;}.scta-i{flex-direction:column;align-items:flex-start;}}
+@media(max-width:640px){.wrap,.nav{padding-left:18px;padding-right:18px;}.cg{grid-template-columns:1fr;}.ftg{grid-template-columns:1fr;}.fbb{flex-direction:column;align-items:flex-start;}.challenges,.benefits,.scta{padding:64px 0;}}
+</style>
+</head>
+<body>
+<header id="hdr">
+  <div class="nav">
+    <a href="index.html" class="logo">
+      <img src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/Domestic_glass_Logo__1_.png" alt="Domestic Glass" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+      <span class="logo-fb">Domestic <span>Glass</span></span>
+    </a>
+    <ul class="nl">
+      <li><a href="index.html">Home</a></li>
+      <li class="drop act"><a href="#">Solutions <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
+        <ul class="dd">
+          <li><a href="windows-doors.html">Windows and Doors</a></li>
+          <li><a href="railings.html">Railings</a></li>
+          <li><a href="partitions.html">Partitions and Doors</a></li>
+          <li><a href="shower-cubicles.html">Shower Cubicles</a></li>
+          <li><a href="mirrors.html">Mirrors</a></li>
+        </ul>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li><li><a href="gallery.html">Gallery</a><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="architects.html">Architects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nr">
+      
+      <a href="contact.html" class="btn btn-blk" style="padding:9px 18px;font-size:11px;">Book a Visit</a>
+    </div>
+    <button class="hbg" id="hbg"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mob" id="mob">
+    <a href="index.html">Home</a>
+    <a href="windows-doors.html">Windows and Doors</a><a href="railings.html">Railings</a>
+    <a href="partitions.html">Partitions and Doors</a><a href="shower-cubicles.html">Shower Cubicles</a>
+    <a href="mirrors.html">Mirrors</a><a href="gallery.html">Gallery</a><a href="projects.html">Projects</a>
+    <a href="about.html">About Us</a><a href="architects.html">Architects</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="mob-cta">Book a Site Visit</a>
+  </nav>
+</header>
+
+<section class="ph">
+  <div class="wrap ph-inner">
+    <div class="ph-left">
+      <span class="eyebrow-w rev">Solutions</span>
+      <h1 class="rev d1">Safety Without<br/>Sacrificing<br/><em>the View.</em></h1>
+      <p class="rev d2">Modern railing systems designed to protect people while preserving openness and visual continuity across your entire space.</p>
+      <a href="contact.html" class="btn btn-teal rev d3">Book a Site Assessment</a>
+      <div class="apps-box rev d4">
+        <h3>Ideal For</h3>
+        <div class="apps"><span class="app-tag">Balconies</span><span class="app-tag">Staircases</span><span class="app-tag">Terraces</span><span class="app-tag">Pool Areas</span><span class="app-tag">Commercial</span></div>
+      </div>
+    </div>
+    <div class="ph-img rev d2">
+      <img src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/IMG_0087%20(1).jpg" alt="Railings" loading="eager"/>
+      <div class="ph-teal"></div>
+    </div>
+  </div>
+</section>
+
+<section class="challenges">
+  <div class="wrap">
+    <span class="teal-bar rev"></span>
+    <span class="eyebrow-g rev">Challenges We Solve</span>
+    <h2 class="rev d1">Common problems. Precision solutions.</h2>
+    <div class="cg">
+      <div class="ci rev d1"><h3>Obstructed Views</h3><p>Glass railings provide uninterrupted sightlines without compromising on safety.</p></div>
+      <div class="ci rev d2"><h3>Bulky Traditional Railings</h3><p>Minimalist systems that complement contemporary architecture without overwhelming the space.</p></div>
+      <div class="ci rev d3"><h3>Safety Requirements</h3><p>Engineered solutions built for strength, durability, and compliance with safety standards.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="wrap">
+    <div class="bg2">
+      <div class="rev">
+        <span class="teal-bar"></span>
+        <span class="eyebrow-g">Benefits</span>
+        <h2>What you gain</h2>
+        <div class="bis"><div class="bi"><div class="bdot"></div><span>Unobstructed Views</span></div><div class="bi"><div class="bdot"></div><span>Enhanced Safety</span></div><div class="bi"><div class="bdot"></div><span>Modern Appearance</span></div><div class="bi"><div class="bdot"></div><span>Weather Resistance</span></div><div class="bi"><div class="bdot"></div><span>Low Maintenance</span></div></div>
+        <a href="contact.html" class="btn btn-blk" style="margin-top:32px;">Book a Site Assessment</a>
+      </div>
+      <div class="bimg rev d2">
+        <img src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/IMG_0262.jpg" alt="Project Outcome" loading="lazy"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="scta">
+  <div class="wrap scta-i">
+    <div class="rev">
+      <h2>Book a Site Assessment</h2>
+      <p>Our team is ready to assess your space and recommend the right solution.</p>
+    </div>
+    <a href="contact.html" class="btn-ws rev d2">Get in Touch <svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
+  </div>
+</section>
+
+<footer id="ft">
+  <div class="wrap">
+    <div class="ftg">
+      <div>
+        <img class="fli" src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/Domestic_glass_Logo__1_.png" alt="Domestic Glass" onerror="this.style.display='none'"/>
+        <p class="ftag">Designing, fabricating, and installing custom glass solutions across India since 1991.</p>
+      </div>
+      <div class="fc"><h4>Solutions</h4><ul><li><a href="windows-doors.html">Windows and Doors</a></li><li><a href="railings.html">Railings</a></li><li><a href="partitions.html">Partitions and Doors</a></li><li><a href="shower-cubicles.html">Shower Cubicles</a></li><li><a href="mirrors.html">Mirrors</a></li></ul></div>
+      <div class="fc"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="gallery.html">Gallery</a><a href="projects.html">Projects</a></li><li><a href="architects.html">Architects</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="fc"><h4>Contact</h4><div class="fci"><a href="tel:+919999999999" class="fca">+91 98765 43210</a><a href="mailto:info@domesticglass.in" class="fca">info@domesticglass.in</a><span class="fca" style="cursor:default;">Hyderabad, Telangana</span></div></div>
+    </div>
+    <div class="fbb"><p class="fbcp">2025 Domestic Glass. All rights reserved.</p><div class="fbl"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div></div>
+  </div>
+</footer>
+<script>
+const hdr=document.getElementById('hdr');
+window.addEventListener('scroll',()=>hdr.classList.toggle('sc',window.scrollY>20));
+const hbg=document.getElementById('hbg'),mob=document.getElementById('mob');
+hbg.addEventListener('click',()=>{hbg.classList.toggle('op');mob.classList.toggle('op');});
+const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');ro.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
+document.querySelectorAll('.ph .rev').forEach(el=>el.classList.add('on'));
+</script>
+</body>
+</html>
